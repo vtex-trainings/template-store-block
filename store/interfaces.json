@@ -1,8 +1,5 @@
 {
   "countdown": {
     "component": "Countdown"
-  },
-  "countdown.icon": {
-    "component": "CountdownIcon"
   }
 }

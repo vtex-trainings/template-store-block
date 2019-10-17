@@ -1,9 +1,4 @@
 {
-  "countdown.title": "Contagem regressiva",
   "editor.countdown.title": "Contagem regressiva",
-  "editor.countdown.description": "Componente de contagem regressiva",
-  "editor.countdown.targetDate.title": "Data de término",
-  "editor.countdown.targetDate.description": "Data de término que está sendo contada",
-  "editor.countdownicon.image.title": "Imagem",
-  "editor.countdownicon.title": "Ícone do contador"
+  "editor.countdown.description": "Componente de contagem regressiva"
 }

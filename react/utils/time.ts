@@ -15,6 +15,6 @@ export const parseTimeRemaining = (totalSeconds: number) : TimeSplit => {
 }
 
 const fillWithZero = (digits: number, number: number) : string => { 
-   const filled = '0' + number 
+   const filled = '0'.repeat(digits - 1) + number 
    return filled.slice(filled.length - digits)
 }
