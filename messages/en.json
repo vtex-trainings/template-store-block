@@ -1,9 +1,9 @@
 {
-  "editor.base-store-component.title": "IO Base App",
-  "editor.base-store-component.description": "A demo component for IO apps",
-  "editor.base-store-component.title.title": "Title",
-  "editor.base-store-component.title.description": "Specify a custom title",
-  "base.title": "Hello, World!!",
-  "base.change-value": "Change your value: {value}",
-  "example": "This is an example"
+  "countdown.title": "Countdown",
+  "editor.countdown.title": "Countdown",
+  "editor.countdown.description": "Countdown component",
+  "editor.countdown.targetDate.title": "Target date",
+  "editor.countdown.targetDate.description": "Target date to which the countdown is counting to",
+  "editor.countdownicon.image.title": "Image",
+  "editor.countdownicon.title": "Countdown icon"
 }

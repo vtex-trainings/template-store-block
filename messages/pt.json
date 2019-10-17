@@ -1,9 +1,9 @@
 {
-  "editor.base-store-component.title": "IO Base App",
-  "editor.base-store-component.description": "Um componente de demonstração para apps do VTEX IO",
-  "editor.base-store-component.title.title": "Título",
-  "editor.base-store-component.title.description": "Especifique um título personalizado",
-  "base.title": "Olá, Mundo!!",
-  "base.change-value": "Troque seu valor: {value}",
-  "example": "Isto é um exemplo"
+  "countdown.title": "Contagem regressiva",
+  "editor.countdown.title": "Contagem regressiva",
+  "editor.countdown.description": "Componente de contagem regressiva",
+  "editor.countdown.targetDate.title": "Data de término",
+  "editor.countdown.targetDate.description": "Data de término que está sendo contada",
+  "editor.countdownicon.image.title": "Imagem",
+  "editor.countdownicon.title": "Ícone do contador"
 }

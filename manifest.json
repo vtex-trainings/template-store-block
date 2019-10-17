@@ -1,9 +1,9 @@
 {
-  "vendor": "vtex",
-  "name": "base-store-component",
-  "version": "0.1.0",
-  "title": "IO Base Component",
-  "description": "IO Base component",
+  "vendor": "storecomponents",
+  "name": "countdown",
+  "version": "0.0.1",
+  "title": "Countdown",
+  "description": "Countdown component",
   "defaultLocale": "pt-BR",
   "builders": {
     "messages": "1.x",
@@ -15,7 +15,8 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "9.x"
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -1,5 +1,8 @@
 {
-  "base-store-component": {
-    "component": "Example"
+  "countdown": {
+    "component": "Countdown"
+  },
+  "countdown.icon": {
+    "component": "CountdownIcon"
   }
 }
