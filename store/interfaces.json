@@ -1,5 +1,5 @@
 {
-  "base-store-component": {
-    "component": "Example"
+  "countdown": {
+    "component": "Countdown"
   }
 }
