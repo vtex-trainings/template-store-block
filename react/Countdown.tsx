@@ -5,9 +5,9 @@ import { TimeSplit } from './typings/global'
 
 const ONE_SECOND_IN_MILLIS = 1000
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
+const Countdown: StorefrontFunctionComponent<CountdownProps> = ({targetDate}) => {
   const [
-    ,
+    timeRemaining,
     setTime
   ] = useState<TimeSplit>({
     hours: '00', 
@@ -16,10 +16,11 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
   })
 
   //This will update the state of the component every second
-  tick('', setTime)
+  tick(targetDate, setTime)
 
   return (
     <Fragment>
+      <h1>{`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}</h1>
     </Fragment>
   )
 }
@@ -41,6 +42,8 @@ const tick = (targetDate: string, dispatchFn: React.Dispatch<React.SetStateActio
 }
 
 interface CountdownProps {
+  targetDate: string,
+  title: string
 }
 
 //This is the schema form that will render the editable props on SiteEditor
@@ -49,6 +52,12 @@ Countdown.schema = {
   description: 'editor.countdown.description',
   type: 'object',
   properties: {
+    targetDate: {
+      title: 'editor.countdown.targetDate.title',
+      description: 'editor.countdown.targetDate.description',
+      type: 'string',
+      default: null,
+    },
   },
 }
 
