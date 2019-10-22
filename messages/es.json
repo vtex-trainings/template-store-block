@@ -4,6 +4,5 @@
   "editor.countdown.description": "Cuenta regresiva component",
   "editor.countdown.targetDate.title": "Fecha final",
   "editor.countdown.targetDate.description": "Fecha final para que se cuenta",
-  "editor.countdownicon.image.title": "Imagen",
-  "editor.countdownicon.title": "Icone de cuenta regresiva"
+  "editor.countdown.title.title": "Titulo"
 }
