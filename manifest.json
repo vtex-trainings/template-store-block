@@ -6,11 +6,9 @@
   "description": "Countdown component",
   "defaultLocale": "pt-BR",
   "builders": {
-    "graphql": "1.x",
     "messages": "1.x",
     "store": "0.x",
-    "react": "3.x",
-    "node": "4.x"
+    "react": "3.x"
   },
   "mustUpdateAt": "2019-04-02",
   "scripts": {
@@ -20,14 +18,5 @@
     "vtex.styleguide": "9.x",
     "vtex.css-handles": "0.x"
   },
-  "policies": [
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "api.giphy.com",
-        "path": "*"
-      }
-    }
-  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

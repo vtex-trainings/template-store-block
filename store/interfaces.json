@@ -4,8 +4,5 @@
   },
   "countdown.title": { 
     "component": "Title"
-  },
-  "countdown.gif": {
-    "component": "Gif"
   }
 }
