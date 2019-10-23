@@ -1,14 +1,14 @@
-import React, { useState, Fragment } from 'react'
-import { FormattedMessage } from 'react-intl'
+import React, { useState } from 'react'
 
 import { parseTimeRemaining } from './utils/time'
 import { TimeSplit } from './typings/global'
 import { useCssHandles } from 'vtex.css-handles'
 
-const ONE_SECOND_IN_MILLIS = 1000
-const CSS_HANDLES = ['container', 'title'] as const 
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({title, targetDate}) => {
+const ONE_SECOND_IN_MILLIS = 1000
+const CSS_HANDLES = ['countdown'] as const 
+
+const Countdown: StorefrontFunctionComponent<CountdownProps> = ({targetDate}) => {
   const [
     timeRemaining, 
     setTime
@@ -17,23 +17,15 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({title, targetDa
     minutes: '00', 
     seconds: '00'
   })
-  
-  const titleText = title || <FormattedMessage id="countdown.title" /> 
+
   const handles = useCssHandles(CSS_HANDLES)
 
   tick(targetDate, setTime)
 
-  return (
-    <Fragment>
-      <div className={`${handles.container} t-heading-2 fw3 w-100 pt7 pb6 c-muted-1`}>
-        <div className={`${handles.title} db tc`}>
-          {titleText}
-        </div>
-        <div className={`db tc`}>
-          {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
-        </div>
-      </div>
-    </Fragment>
+  return(
+    <div className={`${handles.countdown} t-heading-2 fw3 w-100 pt7 pb6 c-muted-1 db tc`}>
+      {`${timeRemaining.hours}:${timeRemaining.minutes}:${timeRemaining.seconds}`}
+    </div>
   )
 }
 
@@ -49,8 +41,7 @@ const tick = (targetDate: string, dispatchFn: React.Dispatch<React.SetStateActio
 }
 
 interface CountdownProps {
-  targetDate: string,
-  title: string
+  targetDate: string
 }
 
 Countdown.schema = {
@@ -58,11 +49,6 @@ Countdown.schema = {
   description: 'editor.countdown.description',
   type: 'object',
   properties: {
-    title: { 
-      title: 'editor.countdown.title.title',
-      type: 'string',
-      default: null,
-    },
     targetDate: {
       title: 'editor.countdown.targetDate.title',
       description: 'editor.countdown.targetDate.description',
