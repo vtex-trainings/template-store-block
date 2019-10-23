@@ -8,10 +8,10 @@ import getGifTranslation from './queries/gifs.gql'
 
 const CSS_HANDLES = ['gif'] as const 
 
-const Gif: StorefrontFunctionComponent<GifProps> = ({query}) => {
+const Gif: StorefrontFunctionComponent<GifProps> = ({searchTerm}) => {
   const handles = useCssHandles(CSS_HANDLES)
   const variables = {
-    query
+    query: searchTerm
   }
 
   return (
@@ -33,7 +33,7 @@ const Gif: StorefrontFunctionComponent<GifProps> = ({query}) => {
 
         return (
           <img 
-            className={`${handles.gif} db center w-100`} 
+            className={`${handles.gif} db center w-30`} 
             src={url}/>
         )
       }}
@@ -43,16 +43,16 @@ const Gif: StorefrontFunctionComponent<GifProps> = ({query}) => {
 }
 
 interface GifProps {
-  query: string
+  searchTerm: string
 }
   
 Gif.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
+  title: 'editor.countdown-gif.title',
+  description: 'editor.countdown-gif.description',
   type: 'object',
   properties: {
-    query: { 
-      title: 'editor.countdown.title.title',
+    searchTerm: { 
+      title: 'editor.countdown.searchTerm.title',
       type: 'string',
       default: null,
     }

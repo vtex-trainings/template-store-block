@@ -21,8 +21,8 @@ interface TitleProps {
 }
   
 Title.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
+  title: 'editor.countdown-title.title',
+  description: 'editor.countdown-title.description',
   type: 'object',
   properties: {
     title: { 
