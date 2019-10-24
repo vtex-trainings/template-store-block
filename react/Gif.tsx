@@ -32,7 +32,9 @@ const Gif: StorefrontFunctionComponent<GifProps> = ({searchTerm}) => {
         } = data
 
         return (
-          <h1>{url}</h1>
+          <img 
+            className={`${handles.gif} db center w-30`} 
+            src={url}/>
         )
       }}
     </Query>
