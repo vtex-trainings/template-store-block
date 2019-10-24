@@ -16,8 +16,8 @@ const Gif: StorefrontFunctionComponent<GifProps> = ({searchTerm}) => {
 
   return (
     <Query
-    query={getGifTranslation}
-    variables={variables}
+    query={}
+    variables={}
     partialRefetch
     ssr={false}
     >
@@ -32,9 +32,6 @@ const Gif: StorefrontFunctionComponent<GifProps> = ({searchTerm}) => {
         } = data
 
         return (
-          <img 
-            className={`${handles.gif} db center w-30`} 
-            src={url}/>
         )
       }}
     </Query>
