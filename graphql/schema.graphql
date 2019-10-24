@@ -1,4 +1,5 @@
 type Query {
   gif(
+    query: String
   ): GiphyGif @cacheControl(scope: PUBLIC, maxAge: SHORT) @withSegment
 }
