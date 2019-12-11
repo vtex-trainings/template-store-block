@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import { parseTimeRemaining } from './utils/time'
 import { TimeSplit } from './typings/global'
@@ -8,7 +7,7 @@ const ONE_SECOND_IN_MILLIS = 1000
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
   const [
-    timeRemaining, 
+    ,
     setTime
   ] = useState<TimeSplit>({
     hours: '00', 
