@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from '@vtex/test-tools/react'
-import Component from '../components/index'
+import Title from '../Title'
 
-describe('HelloWorld Component', () => {
-  const { getByText } = render(<Component />)
+describe('Title Component', () => {
+  const { getByText } = render(<Title />)
 
-  it('should render the example in TypeScript', () => {
-    expect(getByText(/This is an example/)).toBeDefined()
+  it('should render the default title', () => {
+    expect(getByText(/Countdown/)).toBeDefined()
   })
 })

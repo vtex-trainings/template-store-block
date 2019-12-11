@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "vtex.styleguide": "9.x",
-    "vtex.css-handles": "0.x"
+    "vtex.css-handles": "0.x",
+    "vtex.native-types": "0.x"
   },
   "policies": [
     {

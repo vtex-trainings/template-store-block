@@ -3,7 +3,17 @@
     "component": "Countdown"
   },
   "countdown.title": { 
-    "component": "Title"
+    "component": "admin/editor.countdown.title.title",
+    "content": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "admin/editor.countdown.title.title",
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": "store/countdown.title"
+        }
+      }
+    }
   },
   "countdown.gif": {
     "component": "Gif"

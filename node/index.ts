@@ -44,6 +44,12 @@ export default new Service<Clients, State>({
   clients,
   graphql: {
     resolvers: {
+      GiphyGif: {
+        url: prop('url'),
+      },
+      Query: {
+        gif,
+      }
     },
   },
   routes: {

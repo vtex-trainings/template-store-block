@@ -6,9 +6,10 @@ import { useCssHandles } from 'vtex.css-handles'
 
 
 const ONE_SECOND_IN_MILLIS = 1000
-const CSS_HANDLES = ['countdown'] as const 
+const CSS_HANDLES = ['countdown'] as const
+const DEFAULT_TARGET_DATE = (new Date('2019-12-24')).toISOString()
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({targetDate}) => {
+const Countdown: StorefrontFunctionComponent<CountdownProps> = ({targetDate = DEFAULT_TARGET_DATE}) => {
   const [
     timeRemaining, 
     setTime
@@ -45,13 +46,13 @@ interface CountdownProps {
 }
 
 Countdown.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
+  title: 'admin/editor.countdown.title',
+  description: 'admin/editor.countdown.description',
   type: 'object',
   properties: {
     targetDate: {
-      title: 'editor.countdown.targetDate.title',
-      description: 'editor.countdown.targetDate.description',
+      title: 'admin/editor.countdown.targetDate.title',
+      description: 'admin/editor.countdown.targetDate.description',
       type: 'string',
       default: null,
     },

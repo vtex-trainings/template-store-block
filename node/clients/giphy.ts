@@ -15,15 +15,7 @@ export default class Giphy extends ExternalClient {
   }
 
   public async translateGif(query: string): Promise<any> {
-    const { 
-      data: {
-        images: {
-          original: {
-            url,
-          },
-        },
-      },
-    } = await this.http.get(
+    const { data } = await this.http.get(
       this.routes.translate(), 
       {
         headers: {
@@ -36,6 +28,11 @@ export default class Giphy extends ExternalClient {
       }
     )
 
-    return {url}
+    console.log({ data })
+    const url = data && data.images
+      ? data.images.original.url
+      : ''
+
+    return { url }
   }
 }
