@@ -3,12 +3,12 @@
     "component": "Countdown"
   },
   "countdown.title": { 
-    "component": "admin/editor.countdown.title.title",
+    "component": "editor.countdown.title.title",
     "content": {
       "type": "object",
       "properties": {
         "title": {
-          "title": "admin/editor.countdown.title.title",
+          "title": "editor.countdown.title.title",
           "$ref": "app:vtex.native-types#/definitions/text",
           "default": "store/countdown.title"
         }

@@ -42,12 +42,12 @@ interface GifProps {
 }
   
 Gif.schema = {
-  title: 'admin/editor.countdown-gif.title',
-  description: 'admin/editor.countdown-gif.description',
+  title: 'editor.countdown-gif.title',
+  description: 'editor.countdown-gif.description',
   type: 'object',
   properties: {
     searchTerm: {
-      title: 'admin/editor.countdown.searchTerm.title',
+      title: 'editor.countdown.searchTerm.title',
       type: 'string',
       default: null,
     }

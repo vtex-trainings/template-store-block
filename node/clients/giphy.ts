@@ -28,7 +28,6 @@ export default class Giphy extends ExternalClient {
       }
     )
 
-    console.log({ data })
     const url = data && data.images
       ? data.images.original.url
       : ''

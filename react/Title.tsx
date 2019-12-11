@@ -20,8 +20,8 @@ interface TitleProps {
 }
   
 Title.schema = {
-  "title": "admin/editor.countdown-title.title",
-  "description": "admin/editor.countdown-title.description",
+  "title": "editor.countdown-title.title",
+  "description": "editor.countdown-title.description",
 }
   
 export default Title

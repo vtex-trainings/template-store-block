@@ -46,13 +46,13 @@ interface CountdownProps {
 }
 
 Countdown.schema = {
-  title: 'admin/editor.countdown.title',
-  description: 'admin/editor.countdown.description',
+  title: 'editor.countdown.title',
+  description: 'editor.countdown.description',
   type: 'object',
   properties: {
     targetDate: {
-      title: 'admin/editor.countdown.targetDate.title',
-      description: 'admin/editor.countdown.targetDate.description',
+      title: 'editor.countdown.targetDate.title',
+      description: 'editor.countdown.targetDate.description',
       type: 'string',
       default: null,
     },
