@@ -3,7 +3,7 @@
     "component": "Countdown"
   },
   "countdown.title": { 
-    "component": "editor.countdown.title.title",
+    "component": "Title",
     "content": {
       "type": "object",
       "properties": {
