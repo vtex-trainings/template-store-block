@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IOMessage } from 'vtex.native-types'
+import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 
 const CSS_HANDLES = ['title'] as const 
@@ -10,7 +10,7 @@ const Title: StorefrontFunctionComponent<TitleProps> = ({title}) => {
 
   return (
     <div className={`${handles.title} t-heading-2 fw3 w-100 pt7 pb6 c-muted-1 db tc`}>
-      <IOMessage id={title} />
+      {title || <FormattedMessage id="store/countdown.title" />}
     </div> 
   )
 }

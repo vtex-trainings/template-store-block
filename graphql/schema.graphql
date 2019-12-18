@@ -1,5 +1,8 @@
 type Query {
+  """
+    Get a gif from Giphy
+  """
   gif(
     query: String
-  ): GiphyGif @cacheControl(scope: PUBLIC, maxAge: SHORT) @withSegment
+  ): GiphyGif @cacheControl(scope: PRIVATE, maxAge: SHORT) @withSegment
 }

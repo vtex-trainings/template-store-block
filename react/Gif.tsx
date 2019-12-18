@@ -1,40 +1,24 @@
 
-import React, { useMemo } from 'react'
-import { Query } from 'react-apollo'
-
-import { useCssHandles } from 'vtex.css-handles'
+import React from 'react'
+import { useQuery } from 'react-apollo'
 
 import getGifTranslation from './queries/gifs.graphql'
 
-const CSS_HANDLES = ['gif'] as const 
-
 const Gif: StorefrontFunctionComponent<GifProps> = ({searchTerm = 'navidad'}) => {
-  const handles = useCssHandles(CSS_HANDLES)
-  const variables = useMemo(() => ({
-    query: searchTerm
-  }), [searchTerm])
+  const { data, loading } = useQuery(getGifTranslation, {
+    variables: {
+      query: searchTerm
+    },
+    ssr: false
+  })
 
   return (
-    <Query
-    query={getGifTranslation}
-    variables={variables}
-    partialRefetch
-    ssr={false}
-    >
-      {({data, loading, error}: any) => {
-        if (loading || error) {
-          return null
-        }
-
-        return (
-          <div className={`${handles.gif} tc`}>
-            <img src={data.gif.url} />
-          </div>
-        )
-      }}
-    </Query>
+    <div className="tc">
+      {!loading &&
+        <img src={data.gif.url} />
+      }
+    </div>
   )
-
 }
 
 interface GifProps {

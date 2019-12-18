@@ -1,4 +1,4 @@
-query getGifTranslation($query:String) {
+query getGifTranslation($query: String) {
   gif(query: $query) {
     url
   }

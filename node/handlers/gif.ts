@@ -1,13 +1,11 @@
-import {
-  json
-} from 'co-body'
+// import {
+//   json
+// } from 'co-body'
 
 export async function handleGif(ctx: Context, next: () => Promise < any > ) {
-  const body = await json(ctx.req)
+  // const body = await json(ctx.req)
 
-  const {
-    query,
-  } = body
+  const query = ctx.query.query
 
   ctx.set('cache-control', 'no-cache,no-store')
   const url = await ctx.clients.giphy.translateGif(query)

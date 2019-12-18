@@ -1,5 +1,10 @@
 export const gif = async (
     _: any,
     { query }: { query: string },
-    { clients: { giphy }}: Context
-) => giphy.translateGif(query)
+    ctx: Context
+) => {
+  const { clients: { giphy }} = ctx
+  
+  console.log('HOLA AMIGOS', { query })
+  return giphy.translateGif(query)
+}
