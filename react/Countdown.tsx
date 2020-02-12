@@ -1,13 +1,19 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 
 import { parseTimeRemaining } from './utils/time'
 import { TimeSplit } from './typings/global'
 
+import { useCssHandles } from 'vtex.css-handles'
+
 const ONE_SECOND_IN_MILLIS = 1000
 
-const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
+const CSS_HANDLES = [
+  'countdownText'
+]
+
+const Countdown: StorefrontFunctionComponent<CountdownProps> = ({targetDate}) => {
   const [
-    ,
+    currentTime,
     setTime
   ] = useState<TimeSplit>({
     hours: '00', 
@@ -15,13 +21,17 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({}) => {
     seconds: '00'
   })
 
+  const handles = useCssHandles(CSS_HANDLES)
+
   //This will update the state of the component every second
-  tick('', setTime)
+  tick(targetDate, setTime)
 
   return (
-    <Fragment>
-    </Fragment>
+    <span className={`${handles.countdownText} db tc t-heading-2 fw3 w-100 c-muted-1`}>
+      {currentTime.hours}:{currentTime.minutes}:{currentTime.seconds}
+    </span>
   )
+
 }
 
 /**
@@ -41,6 +51,7 @@ const tick = (targetDate: string, dispatchFn: React.Dispatch<React.SetStateActio
 }
 
 interface CountdownProps {
+  targetDate: string
 }
 
 //This is the schema form that will render the editable props on SiteEditor
@@ -49,6 +60,10 @@ Countdown.schema = {
   description: 'editor.countdown.description',
   type: 'object',
   properties: {
+    title: 'editor.countdown.targetDate.title',
+    description: 'editor.countdown.targetDate.description',
+    default: null,
+    type: 'string'
   },
 }
 

@@ -1,4 +1,6 @@
 {
   "editor.countdown.title": "Countdown",
-  "editor.countdown.description": "Countdown component"
+  "editor.countdown.description": "Countdown component",
+  "editor.countdown.targetDate.title": "Target Date",
+  "editor.countdown.targetDate.description": "The target date of the countdown"
 }

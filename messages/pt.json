@@ -1,4 +1,6 @@
 {
   "editor.countdown.title": "Contagem regressiva",
-  "editor.countdown.description": "Componente de contagem regressiva"
+  "editor.countdown.description": "Componente de contagem regressiva",
+  "editor.countdown.targetDate.title": "Data destino",
+  "editor.countdown.targetDate.description": "Data destino de contagem regressiva"
 }
